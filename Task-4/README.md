@@ -5,37 +5,16 @@ To restrict access to container monitoring logs using a dedicated user.
 
 ---
 
-## Step 1: Create Monitoring User
-```bash
-sudo useradd monitoruser
-```
 
-
-Set password for the user.
+## Step 1: Assign Ownership
 ```bash
-sudo passwd monitoruser
+sudo chown -R a-vin:a-vin /opt/container-monitor
 ```
 
 
 ---
 
-## Step 2: Create Monitoring Directory
-```bash
-sudo mkdir -p /opt/container-monitor
-```
-
-
----
-
-## Step 3: Assign Ownership
-```bash
-sudo chown -R monitoruser:monitoruser /opt/container-monitor
-```
-
-
----
-
-## Step 4: Set Permissions
+## Step 2: Set Permissions
 
 Provide full access only to monitoring user.
 ```bash
@@ -50,11 +29,11 @@ Permission explanation:
 
 ---
 
-## Step 5: Verify Access Control
+## Step 3: Verify Access Control
 
 Switch to monitoring user.
 ```bash
-su monitoruser
+su a-vin
 ```
 
 
@@ -67,7 +46,7 @@ ls
 
 Now test with another user.
 ```bash
-su ubuntu
+su avi
 cd /opt/container-monitor
 ```
 
