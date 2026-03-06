@@ -32,8 +32,10 @@ sudo systemctl enable ssh
 ## Step 2: Verify Server IP Address
 
 To find the IP address of the server run:
-
+```bash
 ip a
+```
+
 
 Example output:
 
@@ -44,8 +46,10 @@ Example output:
 ## Step 3: Connect to Server Using SSH
 
 From the client machine:
-
+```bash
 ssh username@server-ip
+```
+
 
 Example:
 
@@ -56,8 +60,10 @@ ssh ubuntu@192.168.1.10
 ## Step 4: Generate SSH Key Pair
 
 Generate SSH keys on the client machine.
-
+```bash
 ssh-keygen
+```
+
 
 Press Enter for default values.
 
@@ -69,8 +75,10 @@ This generates:
 ---
 
 ## Step 5: Copy SSH Key to Server
-
+```bash
 ssh-copy-id username@server-ip
+```
+
 
 Example:
 
@@ -79,8 +87,10 @@ ssh-copy-id ubuntu@192.168.1.10
 ---
 
 ## Step 6: Test Passwordless Login
-
+```bash
 ssh ubuntu@192.168.1.10
+```
+
 
 The login should occur without asking for a password.
 

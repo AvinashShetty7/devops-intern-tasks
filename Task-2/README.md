@@ -8,40 +8,53 @@ To install Docker, build a Docker image, and deploy a containerized web applicat
 ## Step 1: Install Docker
 
 Update package list.
-
+```bash
 sudo apt update
+```
+
 
 Install Docker.
-
+```bash
 sudo apt install docker.io -y
+```
+
 
 Start Docker service.
-
+```bash
 sudo systemctl start docker
+```
+
 
 Enable Docker on system boot.
-
+```bash
 sudo systemctl enable docker
+```
+
 
 Verify Docker installation.
-
+```bash
 docker --version
+```
+
 
 ---
 
 ## Step 2: Create Project Directory
-
+```bash
 mkdir webapp
 cd webapp
+```
+
 
 ---
 
 ## Step 3: Create index.html
-
+```bash
 nano index.html
+```
 
 Example content:
-
+```bash
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,48 +65,64 @@ Example content:
 <p>DevOps Internship Assignment</p>
 </body>
 </html>
+```
+
 
 ---
 
 ## Step 4: Create Dockerfile
-
+```bash
 nano Dockerfile
+```
+
 
 Content:
-
+```bash
 FROM nginx:latest
 
 COPY index.html /usr/share/nginx/html/index.html
 
 EXPOSE 80
+```
+
 
 ---
 
 ## Step 5: Build Docker Image
-
+```bash
 docker build -t my-webapp .
+```
+
 
 Check created images:
-
+```bash
 docker images
+```
+
 
 ---
 
 ## Step 6: Run Docker Container
-
+```bash
 docker run -d -p 8000:80 --name web-container my-webapp
+```
+
 
 Check running containers.
-
+```bash
 docker ps
+```
+
 
 ---
 
 ## Step 7: Access the Application
 
 Open a browser and navigate to:
-
+```bash
 http://server-ip:8000
+```
+
 
 Example:
 
