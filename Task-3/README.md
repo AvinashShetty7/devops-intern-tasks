@@ -42,7 +42,7 @@ echo "---------------------------" >> /opt/container-monitor/logs/container.log
 
 ## Step 3: Make Script Executable
 ```bash
-sudo chmod +x /opt/container-monitor/monitor.sh
+sudo chmod +x /opt/container-monitor/monitor-cont.sh
 ```
 
 
@@ -50,7 +50,7 @@ sudo chmod +x /opt/container-monitor/monitor.sh
 
 ## Step 4: Test the Script
 ```bash
-sudo /opt/container-monitor/monitor.sh
+sudo /opt/container-monitor/monitor-cont.sh
 ```
 
 
@@ -72,7 +72,7 @@ crontab -e
 
 Add the following line to run every minute.
 ```bash
-* * * * * /opt/container-monitor/monitor.sh
+* * * * * /opt/container-monitor/monitor-cont.sh
 ```
 
 
