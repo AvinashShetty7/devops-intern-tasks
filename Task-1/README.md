@@ -4,26 +4,29 @@
 To configure secure remote access to a Linux server using SSH with passwordless authentication.
 
 ---
-## use virtualbox for creating ubuntu server
+## Used virtualbox for creating ubuntu server
 ---
 ## Step 1: Install OpenSSH Server
 
 Update system packages.
-
+```bash
 sudo apt update
-
+```
 Install OpenSSH server.
 
+```bash
 sudo apt install openssh-server -y
-
+```
 Check SSH service status.
 
+```bash
 sudo systemctl status ssh
-
+```
 Enable SSH service.
 
+```bash
 sudo systemctl enable ssh
-
+```
 ---
 
 ## Step 2: Verify Server IP Address
