@@ -33,13 +33,13 @@ sudo systemctl enable ssh
 
 To find the IP address of the server run:
 ```bash
-ip a
+ifconfig
 ```
 
 
 Example output:
 
-192.168.1.10
+10.181.122.217
 
 ---
 
@@ -50,14 +50,15 @@ From the client machine:
 ssh username@server-ip
 ```
 
-
+It will ask password for login
 Example:
 
-ssh ubuntu@192.168.1.10
+ssh a-vin@10.181.122.217
 
+a-vin->default user
 ---
 
-## Step 4: Generate SSH Key Pair
+## Step 4: Generate SSH Key Pair for passwordless authentication
 
 Generate SSH keys on the client machine.
 ```bash
@@ -82,13 +83,13 @@ ssh-copy-id username@server-ip
 
 Example:
 
-ssh-copy-id ubuntu@192.168.1.10
+ssh-copy-id a-vin@10.181.122.217
 
 ---
 
 ## Step 6: Test Passwordless Login
 ```bash
-ssh ubuntu@192.168.1.10
+ssh a-vin@10.181.122.217
 ```
 
 
