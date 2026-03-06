@@ -20,11 +20,11 @@ sudo apt install ufw -y
 
 Example allowed IP:
 
-192.168.1.20
+10.181.122.152 (host laptop ip)
 
 Command:
 ```bash
-sudo ufw allow from 192.168.1.20 to any port 22
+sudo ufw allow from 10.181.122.152 to any port 22
 ```
 
 
@@ -62,9 +62,14 @@ sudo ufw status
 
 Example output:
 ```bash
-22 ALLOW FROM 192.168.1.20  
-80 ALLOW  
-8000 ALLOW
+To                         Action      From
+--                         ------      ----
+80                         ALLOW       Anywhere
+8000                       ALLOW       Anywhere
+22                         ALLOW       10.181.122.152
+80 (v6)                    ALLOW       Anywhere (v6)
+8000 (v6)                  ALLOW       Anywhere (v6)
+
 ```
 
 
